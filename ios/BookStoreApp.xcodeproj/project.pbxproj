@@ -32,6 +32,9 @@
 		59498C83D14E47FB827E05F6 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82D18C1D61FA4209914089C1 /* Octicons.ttf */; };
 		A3CD806D90FE4421835386A3 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92100E7397254DA99B0C4D88 /* SimpleLineIcons.ttf */; };
 		FD31BB61FC0242D3809D1533 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E2CD6FD1F66401DBA7C291F /* Zocial.ttf */; };
+		39C1B839E69D464684E4943D /* NewJuneBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C02E1DF4ADE44C1DB89E9124 /* NewJuneBold.otf */; };
+		A2FD513E195C4C61BC8BF454 /* NewJuneBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3A4B428E3D4B4B6EBD7BCF33 /* NewJuneBook.otf */; };
+		3857079CAC4241E489FE7C31 /* NewJuneMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 299A72C4E4EF41EFAA2CA782 /* NewJuneMedium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		82D18C1D61FA4209914089C1 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		92100E7397254DA99B0C4D88 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		8E2CD6FD1F66401DBA7C291F /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C02E1DF4ADE44C1DB89E9124 /* NewJuneBold.otf */ = {isa = PBXFileReference; name = "NewJuneBold.otf"; path = "../assets/fonts/NewJuneBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3A4B428E3D4B4B6EBD7BCF33 /* NewJuneBook.otf */ = {isa = PBXFileReference; name = "NewJuneBook.otf"; path = "../assets/fonts/NewJuneBook.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		299A72C4E4EF41EFAA2CA782 /* NewJuneMedium.otf */ = {isa = PBXFileReference; name = "NewJuneMedium.otf"; path = "../assets/fonts/NewJuneMedium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,9 @@
 				82D18C1D61FA4209914089C1 /* Octicons.ttf */,
 				92100E7397254DA99B0C4D88 /* SimpleLineIcons.ttf */,
 				8E2CD6FD1F66401DBA7C291F /* Zocial.ttf */,
+				C02E1DF4ADE44C1DB89E9124 /* NewJuneBold.otf */,
+				3A4B428E3D4B4B6EBD7BCF33 /* NewJuneBook.otf */,
+				299A72C4E4EF41EFAA2CA782 /* NewJuneMedium.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -368,6 +377,9 @@
 				59498C83D14E47FB827E05F6 /* Octicons.ttf in Resources */,
 				A3CD806D90FE4421835386A3 /* SimpleLineIcons.ttf in Resources */,
 				FD31BB61FC0242D3809D1533 /* Zocial.ttf in Resources */,
+				39C1B839E69D464684E4943D /* NewJuneBold.otf in Resources */,
+				A2FD513E195C4C61BC8BF454 /* NewJuneBook.otf in Resources */,
+				3857079CAC4241E489FE7C31 /* NewJuneMedium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

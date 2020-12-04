@@ -1,16 +1,17 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { AppRegistry } from 'react-native';
+import { AppRegistry, StatusBar } from 'react-native';
 import { Provider as PaperProvider } from 'react-native-paper';
 import { name as appName } from './app.json';
-import App from './App';
 import { NavigationContainer } from '@react-navigation/native';
+import AuthNavigator from './app/navigators/AuthNavigator';
 
 export default function Main() {
     return (
       <NavigationContainer>
+        <StatusBar hidden={true} />
         <PaperProvider>
-          <App />
+          <AuthNavigator />
         </PaperProvider>
       </NavigationContainer>
     );
