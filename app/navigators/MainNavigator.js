@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import { AppText } from '../components/form';
@@ -32,10 +32,15 @@ export default function MainNavigator() {
                 case 'Favorites':   name = focused ? 'heart'      : 'heart-outline' ;  break;
                 case 'Profile':     name = focused ? 'person'     : 'person-outline' ; break;
             }
-            return <Icon name={name} size={25} />
+            return <Icon name={name} color='#FFF' size={25} />
             },
         })}
-        tabBarOptions={{ showLabel: false }}
+        tabBarOptions={{ 
+          style: {
+              backgroundColor: '#7F0000',
+          },
+          showLabel: false 
+        }}
     >
         <Main.Screen name="Home" component={Home} />
         <Main.Screen name="Books" component={Books} />
@@ -45,19 +50,3 @@ export default function MainNavigator() {
     </Main.Navigator>
   );
 }
-
-const styles = StyleSheet.create({
-  /*container: {
-    backgroundColor: colors.darkgray,
-    paddingTop: 20,
-    paddingBottom: 15,
-    paddingHorizontal: 10,
-    height: 80,
-    borderTopWidth: 0,
-    borderTopLeftRadius: 35,
-    borderTopRightRadius: 35,
-  },
-  tab: {
-    marginHorizontal: 25,
-  },*/
-});
