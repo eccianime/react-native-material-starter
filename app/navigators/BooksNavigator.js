@@ -2,11 +2,8 @@ import React from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
 import { AppText } from '../components/form';
-import { StyleSheet, View } from 'react-native';
-
-const Title = () => <View><AppText>Title</AppText></View>
-const Author = () => <View><AppText>Author</AppText></View>
-const Gender = () => <View><AppText>Gender</AppText></View>
+import { StyleSheet } from 'react-native';
+import { Title, Author, Gender } from '../screens/books'
 
 const Books = createMaterialTopTabNavigator();
 const BooksNavigator = () => (
@@ -16,6 +13,7 @@ const BooksNavigator = () => (
             indicatorStyle: styles.indicator,
             style: styles.tab,
         }}
+        initialRouteName='Title'
         screenOptions={({ route }) => ({
             tabBarLabel: ({ focused }) => {
                 return (

@@ -1,8 +1,8 @@
 import React from 'react';
 import { ImageBackground, StyleSheet } from 'react-native';
 
-const BaseBackground = ({ children }) => (
-    <ImageBackground source={ require('../../assets/images/background.jpg') } style={ styles.background }>
+const BaseBackground = ({ children, style, source }) => (
+    <ImageBackground source={ source || require('../../assets/images/background.jpg') } style={ [styles.background, style] }>
         {children}
     </ImageBackground>
 )

@@ -6,7 +6,8 @@ import { Recents } from '../screens/home'
 
 const Home = createStackNavigator();
 const HomeNavigator = () => (
-  <Home.Navigator screenOptions={screenOptions}>
+  <Home.Navigator 
+    screenOptions={screenOptions}>
     <Home.Screen name="Recents" component={Recents} />
   </Home.Navigator>
 );

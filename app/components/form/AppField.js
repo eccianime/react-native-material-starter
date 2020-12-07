@@ -4,15 +4,15 @@ import { AppText } from '.';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const AppField = ({ 
-    labelStyle, fieldStyle, 
+    labelStyle, fieldStyle, containerStyle,
     label, value, onChangeText,
     inputProps, labelProps,
-    icon,    
+    icon, placeholder
   }) =>(
-    <View>
+    <View style={containerStyle}>
         { label && <AppText style={[styles.label, labelStyle]} {...labelProps} >{label}</AppText> }
         <View>
-          <TextInput style={[styles.field, icon && { paddingLeft: 45 } , fieldStyle]} {...inputProps} value={value} onChangeText={onChangeText} />
+          <TextInput style={[styles.field, icon && { paddingLeft: 45 } , fieldStyle]} {...inputProps} value={value} onChangeText={onChangeText} placeholder={placeholder} />
           {   icon && <Icon name={icon} style={styles.icon} />  }
         </View>
     </View>

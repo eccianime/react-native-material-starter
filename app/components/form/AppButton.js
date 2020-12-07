@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { TouchableRipple } from 'react-native-paper';
 import AppText from './AppText';
 
@@ -7,9 +7,12 @@ const AppButton = ({ style, onPress, label }) =>(
     <TouchableRipple
         onPress={onPress}
         rippleColor="rgba(0, 0, 0, .32)"
-        style={[styles.button, style]}
+        style={[styles.button]}
+        borderless
         >
-        <AppText size='bold' style={styles.label}>{label}</AppText>
+            <View style={style}>
+                <AppText size='bold' style={styles.label}>{label}</AppText>
+            </View>
     </TouchableRipple>    
 )
 
