@@ -3,8 +3,9 @@ import { View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import { Surface } from "react-native-paper";
 import BaseBackground from '../../components/common/BaseBackground';
 import { AppText } from '../../components/form';
+import Icon from 'react-native-vector-icons/Ionicons';
 
-const BookCard = ({ image, title, gender, year, id, navigation }) => {
+const BookCard = ({ image, title, gender, year, id, navigation, style }) => {
     const [ width, updateWidth ] = useState(0);
     
     const isPortrait = () => {
@@ -25,13 +26,21 @@ const BookCard = ({ image, title, gender, year, id, navigation }) => {
         }
     }
     const onPress = () =>{
-        navigation.navigate('Book Detail', { id })
+        navigation.push('Book Detail', { id })
     }
+    const user = undefined;
     return(
-        <View style={[ styles.container, { width: isPortrait() ? width/2-10 : width/3-10 }]}>
+        <View style={[ styles.container, { width: isPortrait() ? width/2-10 : width/3-10 }, style]}>
             <TouchableOpacity onPress={onPress}>
                 <Surface style={{ elevation: 10 }}>
-                    <BaseBackground source={ image } style={styles.image} />
+                    <BaseBackground source={ image } style={styles.image}>
+                    {
+                        user && 
+                        <TouchableOpacity style={styles.iconButton} onPress={onPress}>
+                            <Icon name='heart-outline' style={styles.icon} />
+                        </TouchableOpacity>
+                    }
+                    </BaseBackground>
                     <View style={styles.containerDescriptor}>
                         <AppText size='bold' style={styles.title}>Author</AppText>
                         <AppText style={styles.subTitle}>Gender (Year)</AppText>
@@ -48,6 +57,15 @@ const styles = StyleSheet.create({
     },
     containerDescriptor: {
         padding: 7,
+    },
+    iconButton: {
+        position: "absolute",
+        top: 5,
+        right: 5,
+    },
+    icon: {
+        color:'#c62828',
+        fontSize: 25,
     },
     image: { 
         height: 200 

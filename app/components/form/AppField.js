@@ -35,8 +35,8 @@ const styles = StyleSheet.create({
       color: '#333'
     },
     label: {
-        paddingVertical: 10,
-        color: '#666'
+      paddingVertical: 10,
+      color: '#666'
     },
 })
 

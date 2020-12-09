@@ -1,5 +1,6 @@
-import Title  from './Title'
-import Author from './Author'
-import Gender from './Gender'
+import Title  from './TitleScreen'
+import Author from './AuthorScreen'
+import Gender from './GenderScreen'
+import BookDetail from './BookDetailScreen'
 
-export { Title, Author, Gender }
+export { Title, Author, Gender, BookDetail }

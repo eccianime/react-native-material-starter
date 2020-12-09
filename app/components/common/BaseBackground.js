@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     background: {
         padding: 30,
         flex: 1,
-        resizeMode: "cover",
+        resizeMode: "contain",
         justifyContent: "center",
         alignItems: "center",
     }

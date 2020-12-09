@@ -8,11 +8,11 @@ const Title = ({ navigation }) => {
         <ScrollView style={styles.container}>
             <AppField icon='search' placeholder='Search Title' containerStyle={styles.field} />
             <View style={styles.containerBooks}>
-                <BookCard image={ require('../../assets/images/portada01.jpg') }  />
-                <BookCard image={ require('../../assets/images/portada01.jpg') }  />
-                <BookCard image={ require('../../assets/images/portada01.jpg') }  />
-                <BookCard image={ require('../../assets/images/portada01.jpg') }  />
-                <BookCard image={ require('../../assets/images/portada01.jpg') }  />
+                <BookCard navigation={navigation} image={ require('../../assets/images/portada01.jpg') }  />
+                <BookCard navigation={navigation} image={ require('../../assets/images/portada01.jpg') }  />
+                <BookCard navigation={navigation} image={ require('../../assets/images/portada01.jpg') }  />
+                <BookCard navigation={navigation} image={ require('../../assets/images/portada01.jpg') }  />
+                <BookCard navigation={navigation} image={ require('../../assets/images/portada01.jpg') }  />
             </View>
         </ScrollView>
     )
