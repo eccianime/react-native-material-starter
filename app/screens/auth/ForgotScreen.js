@@ -19,7 +19,6 @@ const Forgot = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   forgotButton: {
-    marginVertical: 15,
     backgroundColor: '#7F0000'
   },
   forgotLabel: {

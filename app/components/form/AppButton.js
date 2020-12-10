@@ -3,11 +3,12 @@ import { StyleSheet, View } from 'react-native';
 import { TouchableRipple } from 'react-native-paper';
 import AppText from './AppText';
 
-const AppButton = ({ style, onPress, label, containerStyle, labelStyle }) =>(
+const AppButton = ({ style, onPress, label, containerStyle, labelStyle, disabled }) =>(
     <TouchableRipple
+        disabled={disabled}
         onPress={onPress}
         rippleColor="rgba(0, 0, 0, .32)"
-        style={[styles.button, containerStyle]}
+        style={[styles.button, containerStyle, { opacity: disabled ? 0.7 : 1 }]}
         borderless
         >
             <View style={style}>

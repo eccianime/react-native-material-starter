@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { BaseBackground } from '../../components/common';
+import { BaseBackground, Loader } from '../../components/common';
 import { AppButton, AppField, AppText } from '../../components/form'
 
 const SignIn = ({ navigation }) => {
@@ -10,15 +10,18 @@ const SignIn = ({ navigation }) => {
   })
   return (
       <BaseBackground>
-        <View style={styles.whiteCard}>
-          <AppText size='bold' style={styles.title}>Sign in with your credentials</AppText>
-          <AppField label='User:' value={userData.nickname} onChangeText={ text => changeData({...userData, nickname: text })} icon='person-circle-outline' />
-          <AppField label='Password:' value={userData.password} onChangeText={ text => changeData({...userData, password: text })}  inputProps={{secureTextEntry:true}} icon='lock-closed' />
-          <View style={{paddingTop: 20}}>
-            <AppButton onPress={ () => navigation.navigate( 'Main' ) } label='Enter' style={styles.loginButton} />
-            <AppButton onPress={ () => navigation.navigate( 'Register' ) } label='Register' style={styles.registerButton} />
-            <AppText onPress={ () => navigation.navigate( 'Forgot' ) } style={[styles.label, { textAlign: "right" }]}>Forgot Password?</AppText>
-            <AppText size='bold' style={[styles.label, { textAlign: "center" }]}>V1.0</AppText>
+        <View>
+          { true && <Loader />}
+          <View style={styles.whiteCard}>
+            <AppText size='bold' style={styles.title}>Sign in with your credentials</AppText>
+            <AppField label='User:' value={userData.nickname} onChangeText={ text => changeData({...userData, nickname: text })} icon='person-circle-outline' />
+            <AppField label='Password:' value={userData.password} onChangeText={ text => changeData({...userData, password: text })}  inputProps={{secureTextEntry:true}} icon='lock-closed' />
+            <View style={{paddingTop: 20}}>
+              <AppButton onPress={ () => navigation.navigate( 'Main' ) } label='Enter' style={styles.loginButton} />
+              <AppButton onPress={ () => navigation.navigate( 'Register' ) } label='Register' style={styles.registerButton} />
+              <AppText onPress={ () => navigation.navigate( 'Forgot' ) } style={[styles.label, { textAlign: "right" }]}>Forgot Password?</AppText>
+              <AppText size='bold' style={[styles.label, { textAlign: "center" }]}>V1.0</AppText>
+            </View>
           </View>
         </View>
       </BaseBackground>
@@ -46,7 +49,6 @@ const styles = StyleSheet.create({
   whiteCard: {
     backgroundColor: '#FFF',
     width: '100%',
-    maxWidth: 400,
     padding: 20,
     borderRadius: 10
   },
