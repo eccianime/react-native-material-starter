@@ -3,38 +3,23 @@ import { StyleSheet, ScrollView, View } from 'react-native';
 import { TouchableRipple } from 'react-native-paper';
 import BaseBackground from '../../components/common/BaseBackground';
 import { AppText } from '../../components/form';
+import { Gender } from "../../components/cards";
 
-const Gender = ({ navigation }) => { 
+const GenderScreen = ({ navigation }) => { 
     return (
         <ScrollView style={styles.container}>
             <View style={{ padding: 20 }}>
                 <AppText style={styles.title} size='bold'>FICTION</AppText>
                 <View style={styles.line} />
             </View>
-            <TouchableRipple borderless onPress={ ()=>console.log('Hola') } style={{marginBottom: 20}}>
-                <BaseBackground style={{ height: 100 }} source={ require('../../assets/images/genre-01.jpg') } >
-                    <AppText size='bold' style={styles.genre}>Horror</AppText>
-                </BaseBackground>
-            </TouchableRipple>
-            <TouchableRipple borderless onPress={ ()=>console.log('Hola') } style={{marginBottom: 20}}>
-                <BaseBackground style={{ height: 100 }} source={ require('../../assets/images/genre-02.jpg') } >
-                    <AppText size='bold' style={styles.genre}>Western</AppText>
-                </BaseBackground>
-            </TouchableRipple>
+            <Gender name='Horror' image={ require('../../assets/images/genre-01.jpg') }  />
+            <Gender name='Western' image={ require('../../assets/images/genre-02.jpg') }  />
             <View style={{ padding: 20 }}>
                 <AppText style={styles.genre} style={styles.title} size='bold'>NON-FICTION</AppText>
                 <View style={styles.line} />
             </View>
-            <TouchableRipple borderless onPress={ ()=>console.log('Hola') } style={{marginBottom: 20}}>
-                <BaseBackground style={{ height: 100 }} source={ require('../../assets/images/genre-03.jpg') } >
-                    <AppText size='bold' style={styles.genre}>Tech</AppText>
-                </BaseBackground>
-            </TouchableRipple>
-            <TouchableRipple borderless onPress={ ()=>console.log('Hola') } style={{marginBottom: 20}}>
-                <BaseBackground style={{ height: 100 }} source={ require('../../assets/images/genre-04.jpg') } >
-                    <AppText size='bold' style={styles.genre}>Sci-Fi</AppText>
-                </BaseBackground>
-            </TouchableRipple>
+            <Gender name='Tech' image={ require('../../assets/images/genre-03.jpg') }  />
+            <Gender name='Sci-Fi' image={ require('../../assets/images/genre-04.jpg') }  />
         </ScrollView>
     )
 }
@@ -58,4 +43,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Gender;
+export default GenderScreen;

@@ -1,25 +1,25 @@
 import React from 'react';
 import { StyleSheet, ScrollView, View } from 'react-native';
-import { AuthorCard } from '../../components/author';
+import { Author } from '../../components/cards';
 import { AppField, AppText } from '../../components/form';
 
-const Author = ({ navigation }) => { 
+const AuthorScreen = ({ navigation }) => { 
     return (
         <ScrollView style={styles.container}>
             <AppField icon='search' placeholder='Search Author' />
             <View style={styles.containerAuthors}>
-                <AuthorCard navigation={navigation} image={ require('../../assets/images/author01.jpg') } />
-                <AuthorCard navigation={navigation} image={ require('../../assets/images/author02.jpg') } />
-                <AuthorCard navigation={navigation} image={ require('../../assets/images/author03.jpg') } />
-                <AuthorCard navigation={navigation} image={ require('../../assets/images/author04.jpg') } />
-                <AuthorCard navigation={navigation} image={ require('../../assets/images/author01.jpg') } />
-                <AuthorCard navigation={navigation} image={ require('../../assets/images/author02.jpg') } />
-                <AuthorCard navigation={navigation} image={ require('../../assets/images/author03.jpg') } />
-                <AuthorCard navigation={navigation} image={ require('../../assets/images/author04.jpg') } />
-                <AuthorCard navigation={navigation} image={ require('../../assets/images/author01.jpg') } />
-                <AuthorCard navigation={navigation} image={ require('../../assets/images/author02.jpg') } />
-                <AuthorCard navigation={navigation} image={ require('../../assets/images/author03.jpg') } />
-                <AuthorCard navigation={navigation} image={ require('../../assets/images/author04.jpg') } />
+                <Author navigation={navigation} image={ require('../../assets/images/author01.jpg') } />
+                <Author navigation={navigation} image={ require('../../assets/images/author02.jpg') } />
+                <Author navigation={navigation} image={ require('../../assets/images/author03.jpg') } />
+                <Author navigation={navigation} image={ require('../../assets/images/author04.jpg') } />
+                <Author navigation={navigation} image={ require('../../assets/images/author01.jpg') } />
+                <Author navigation={navigation} image={ require('../../assets/images/author02.jpg') } />
+                <Author navigation={navigation} image={ require('../../assets/images/author03.jpg') } />
+                <Author navigation={navigation} image={ require('../../assets/images/author04.jpg') } />
+                <Author navigation={navigation} image={ require('../../assets/images/author01.jpg') } />
+                <Author navigation={navigation} image={ require('../../assets/images/author02.jpg') } />
+                <Author navigation={navigation} image={ require('../../assets/images/author03.jpg') } />
+                <Author navigation={navigation} image={ require('../../assets/images/author04.jpg') } />
             </View>
         </ScrollView>
     )
@@ -43,4 +43,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Author;
+export default AuthorScreen;

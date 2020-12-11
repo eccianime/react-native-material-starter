@@ -5,30 +5,34 @@ import { AppText } from '../components/form';
 import { StyleSheet } from 'react-native';
 import { Title, Author, Gender } from '../screens/books'
 import colors from '../config/colors';
+import { Header } from '../components/common';
 
 const Books = createMaterialTopTabNavigator();
-const BooksNavigator = () => (
-  <Books.Navigator 
-        backBehavior="initialRoute"
-        tabBarOptions={{
-            indicatorStyle: styles.indicator,
-            style: styles.tab,
-        }}
-        initialRouteName='Title'
-        screenOptions={({ route }) => ({
-            tabBarLabel: ({ focused }) => {
-                return (
-                    <AppText size='bold' style={styles.tabText}>
-                        {route.name}
-                    </AppText>
-                )
-            },
-        })}
-    >
-    <Books.Screen name="Title" component={Title} />
-    <Books.Screen name="Author" component={Author} />
-    <Books.Screen name="Gender" component={Gender} />
-  </Books.Navigator>
+const BooksNavigator = ({ navigation }) => (
+    <>
+        <Header title='ALL BOOKS' showBack={false} showExit={true} navigation={navigation} />
+        <Books.Navigator 
+                backBehavior="initialRoute"
+                tabBarOptions={{
+                    indicatorStyle: styles.indicator,
+                    style: styles.tab,
+                }}
+                initialRouteName='Title'
+                screenOptions={({ route }) => ({
+                    tabBarLabel: ({ focused }) => {
+                        return (
+                            <AppText size='bold' style={styles.tabText}>
+                                {route.name}
+                            </AppText>
+                        )
+                    },
+                })}
+            >
+            <Books.Screen name="Title" component={Title} />
+            <Books.Screen name="Author" component={Author} />
+            <Books.Screen name="Gender" component={Gender} />
+        </Books.Navigator>
+    </>
 );
 
 const styles = StyleSheet.create({

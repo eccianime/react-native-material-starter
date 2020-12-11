@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import { Surface } from "react-native-paper";
-import BaseBackground from '../../components/common/BaseBackground';
-import { AppText } from '../../components/form';
+import BaseBackground from '../common/BaseBackground';
+import { AppText } from '../form';
 import Icon from 'react-native-vector-icons/Ionicons';
 import colors from '../../config/colors';
 
-const BookCard = ({ image, title, gender, year, id, navigation, style }) => {
+const BookCard = ({ image, title, gender, year, author, id, navigation, style }) => {
     const { width } = Dimensions.get('window');
     const onPress = () =>{
         navigation.push('Book Detail', { id })

@@ -1,3 +1,3 @@
-import Recents from "./RecentsScreen";
+import Home from "./HomeScreen";
 
-export { Recents }
+export { Home }

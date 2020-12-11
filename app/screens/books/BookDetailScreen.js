@@ -2,11 +2,12 @@ import React from 'react';
 import { StyleSheet, ScrollView, View, Image, Text } from 'react-native';
 import LinearGradient from "react-native-linear-gradient";
 import { AppButton, AppField, AppText } from '../../components/form';
-import { BookCard } from '../../components/book'
+import { Book } from '../../components/cards'
 import Icon from 'react-native-vector-icons/Ionicons';
 import { BaseBackground } from '../../components/common';
 
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { Header } from '../../components/common';
 const Reviews = createMaterialTopTabNavigator();
 
 const FiveStar = () => (
@@ -41,12 +42,13 @@ const OneStar = () => (
 
 const BookDetail = ({ navigation }) => { 
     return (
+        <>
+        <Header title='TITLE' showBack={true} showExit={false} navigation={navigation} />       
         <ScrollView style={styles.container}>
             <BaseBackground source={ require('../../assets/images/cover01.jpg') } style={{ padding: 0 }} >
                 <LinearGradient colors={['transparent', 'transparent', 'transparent', 'white']} style={{ width: '100%', height: '100%', position: "absolute", bottom: 0 }} />
                 <View style={{ elevation: 10, borderRadius: 10, backgroundColor: 'white', width: '90%', top: 20, alignSelf: "center", marginBottom: 50 }}>
                     <View style={{padding: 20}} >
-                        <AppText style={{ fontSize: 20, textAlign: 'center', marginBottom: 10 }} size='medium'>Book Title </AppText>
                         <View style={{ flexDirection: "row" }}>
                             <View style={{ padding: 5, width: '50%' }}>
                                 <Image source={ require('../../assets/images/cover01.jpg') } style={{ width: '100%', height: 200 }} />
@@ -136,15 +138,16 @@ const BookDetail = ({ navigation }) => {
                     <View style={{paddingBottom: 20}}>
                         <AppText style={{ paddingHorizontal: 20 }} size='bold'>Related Books: </AppText>
                         <View style={{ flexDirection: "row", flexWrap: "wrap", paddingHorizontal: 10 }}>
-                            <BookCard style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
-                            <BookCard style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
-                            <BookCard style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
-                            <BookCard style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
+                            <Book style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
+                            <Book style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
+                            <Book style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
+                            <Book style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
                         </View>
                     </View>
                 </View>
             </BaseBackground>
         </ScrollView>
+        </>
     )
 }
 

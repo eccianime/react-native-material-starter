@@ -43,9 +43,9 @@ const signInController = ({ navigation }) => {
     })
   }
   useEffect( ()=>{
-    AsyncStorage.getItem('userData').then( item =>{
-      if( item !== null ){
-        let data = JSON.parse( item )
+    AsyncStorage.getItem('userData').then( response =>{
+      if( response !== null ){
+        let data = JSON.parse( response )
         changeData(data)
       }
     })
