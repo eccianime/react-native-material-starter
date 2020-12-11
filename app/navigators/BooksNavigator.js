@@ -4,6 +4,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import { AppText } from '../components/form';
 import { StyleSheet } from 'react-native';
 import { Title, Author, Gender } from '../screens/books'
+import colors from '../config/colors';
 
 const Books = createMaterialTopTabNavigator();
 const BooksNavigator = () => (
@@ -32,14 +33,14 @@ const BooksNavigator = () => (
 
 const styles = StyleSheet.create({
     indicator: {
-        backgroundColor: '#7F0000',
+        backgroundColor: colors.primary,
         height: 3,
     },
     tab: {
-        backgroundColor: '#c62828',
+        backgroundColor: colors.secondary,
     },
     tabText: {
-        color: '#FFF',
+        color: colors.white,
         textTransform: 'uppercase'
     }
 })

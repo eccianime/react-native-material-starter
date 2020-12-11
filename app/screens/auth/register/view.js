@@ -2,9 +2,11 @@ import React from 'react';
 import { View } from 'react-native';
 import { BaseBackground, Loader } from '../../../components/common';
 import { AppButton, AppField, AppText } from '../../../components/form';
-import { styles } from './styles';
+import { styles } from '../styles';
 
-const RegisterView = ({ navigation, userData, changeData, registerUser, isLoading }) => (
+const RegisterView = ({ 
+  navigation, userData, changeData, registerUser, isLoading 
+}) => (
     <BaseBackground>
       <View>
         { isLoading && <Loader /> }
@@ -15,8 +17,8 @@ const RegisterView = ({ navigation, userData, changeData, registerUser, isLoadin
           <AppField label='Password:' value={userData.password} onChangeText={ text => changeData({...userData, password: text })}  inputProps={{secureTextEntry:true}} icon='lock-closed' />
           <AppField label='Repeat Password:' value={userData.rpassword} onChangeText={ text => changeData({...userData, rpassword: text })}  inputProps={{secureTextEntry:true}} icon='lock-closed' />
           <View style={{paddingTop: 20}}>
-            <AppButton onPress={registerUser} label='Register' style={styles.registerButton} />
-            <AppText onPress={ () => navigation.navigate( 'Sign In' ) } style={styles.goBack}>Go Back</AppText>
+            <AppButton onPress={registerUser} label='Register' style={styles.primaryButton} />
+            <AppText onPress={ () => navigation.navigate( 'Sign In' ) } style={[styles.label, { textAlign: 'right' }]}>Go Back</AppText>
           </View>
         </View>
       </View>

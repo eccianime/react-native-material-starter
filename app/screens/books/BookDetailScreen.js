@@ -46,7 +46,7 @@ const BookDetail = ({ navigation }) => {
         <>
             <Header navigation={navigation} />
             <ScrollView style={styles.container}>
-                <BaseBackground source={ require('../../assets/images/portada01.jpg') } style={{ padding: 0 }} >
+                <BaseBackground source={ require('../../assets/images/cover01.jpg') } style={{ padding: 0 }} >
                     <LinearGradient colors={['transparent', 'white']} style={{ width: '100%', height: '100%', position: "absolute", bottom: 0 }} />
                     <View style={{ elevation: 10, borderRadius: 10, backgroundColor: 'white', width: '90%', top: 50, alignSelf: "center", marginBottom: 70 }}>
                         <View style={{padding: 20}} >
@@ -132,10 +132,10 @@ const BookDetail = ({ navigation }) => {
                         <View style={{paddingBottom: 20}}>
                             <AppText style={{ paddingHorizontal: 20 }} size='bold'>Related Books: </AppText>
                             <View style={{ flexDirection: "row", flexWrap: "wrap", paddingHorizontal: 10 }}>
-                                <BookCard style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/portada01.jpg') }  />
-                                <BookCard style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/portada01.jpg') }  />
-                                <BookCard style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/portada01.jpg') }  />
-                                <BookCard style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/portada01.jpg') }  />
+                                <BookCard style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
+                                <BookCard style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
+                                <BookCard style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
+                                <BookCard style={{ width: '50%' }} navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
                             </View>
                         </View>
                     </View>

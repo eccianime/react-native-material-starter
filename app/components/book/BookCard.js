@@ -4,6 +4,7 @@ import { Surface } from "react-native-paper";
 import BaseBackground from '../../components/common/BaseBackground';
 import { AppText } from '../../components/form';
 import Icon from 'react-native-vector-icons/Ionicons';
+import colors from '../../config/colors';
 
 const BookCard = ({ image, title, gender, year, id, navigation, style }) => {
     const [ width, updateWidth ] = useState(0);
@@ -64,7 +65,7 @@ const styles = StyleSheet.create({
         right: 5,
     },
     icon: {
-        color:'#c62828',
+        color: colors.secondary,
         fontSize: 25,
     },
     image: { 

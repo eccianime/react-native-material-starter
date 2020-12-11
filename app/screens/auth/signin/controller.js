@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import auth from '@react-native-firebase/auth';
 import * as yup from "yup";
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { Modal } from '../../../components/common';
 import { AppText } from '../../../components/form';
 import SignInView from './view'
+import { AsyncStorage } from 'react-native';
 
 const signInController = ({ navigation }) => {
   const [ userData, changeData ] = useState({
@@ -27,46 +28,28 @@ const signInController = ({ navigation }) => {
       auth().signInWithEmailAndPassword( userData.email, userData.password ).then( response => {
         changeLoader(false)
         navigation.navigate('Main', { screen: 'Recents' })
-        changeData({})
+        AsyncStorage.setItem( 'userData', JSON.stringify(userData) )
       }).catch( error =>{
         changeLoader(false)
         changeModal({   type: 'error', visible: true, title: error.message.substring( error.message.indexOf(']')+2 ) })
-      /*auth().createUserWithEmailAndPassword( userData.email, userData.password ).then( response =>{
-          firestore().collection('users')
-            .add({
-              uid: response.user.uid,
-              fullName: userData.fullName,
-              email: userData.email,
-              createdAt: response.user.metadata.creationTime
-            }).then(() => {
-              changeLoader(false)
-              changeModal({   type: 'success', visible: true, title: "User added successfully" })
-              setTimeout(() => {
-                changeModal({   visible: false, })
-                navigation.navigate('Main', { screen: 'Recents' })
-              }, 3000);
-            }).catch( error => {
-              console.log(error)
-            } );
-        }).catch( error => {
-          changeLoader(false)
-          changeModal({   type: 'error', visible: true, title: error.message.substring( error.message.indexOf(']')+2 ) })
-        })
+      })
     }).catch( error =>{
       changeModal( {
-        type: 'error',
-        visible: true,
-        title: error.errors.map( (item, index) => <Fragment key={`error-item-${index}`}><Icon name='caret-forward' size={16} /><AppText>{item}{'\n'}</AppText></Fragment> )
-      })*/
-            })
-        }).catch( error =>{
-            changeModal( {
-                type: 'error',
-                visible: true,
-                title: error.errors.map( (item, index) => <Fragment key={`error-item-${index}`}><Icon name='caret-forward' size={16} /><AppText>{item}{'\n'}</AppText></Fragment> )
-            })
-        })
-    }
+          type: 'error',
+          visible: true,
+          title: error.errors.map( (item, index) => <Fragment key={`error-item-${index}`}><Icon name='caret-forward' size={16} /><AppText>{item}{'\n'}</AppText></Fragment> )
+      })
+    })
+  }
+  useEffect( ()=>{
+    AsyncStorage.getItem('userData').then( item =>{
+      console.log(item)
+      if( item !== null ){
+        let data = JSON.parse( item )
+        changeData(data)
+      }
+    })
+  }, [] )
   return (<>
     <Modal 
         visible={modal.visible} 

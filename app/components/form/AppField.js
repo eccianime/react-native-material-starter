@@ -2,6 +2,7 @@ import React from 'react';
 import { TextInput, View, StyleSheet } from 'react-native';
 import { AppText } from '.';
 import Icon from 'react-native-vector-icons/Ionicons';
+import colors from '../../config/colors';
 
 const AppField = ({ 
     labelStyle, fieldStyle, containerStyle,
@@ -20,23 +21,23 @@ const AppField = ({
 
 const styles = StyleSheet.create({
     field: {
-      backgroundColor: '#DDD',
+      backgroundColor: colors.opaquegray,
       borderRadius: 30,
       paddingHorizontal: 20,
       paddingVertical: 6,
       fontFamily: 'NewJuneBook',
-      color: '#000'
+      color: colors.lightgray
     },
     icon: {
       position: 'absolute',
       top: 7,
       left: 13,
       fontSize: 25,
-      color: '#333'
+      color: colors.darkGray 
     },
     label: {
       paddingVertical: 10,
-      color: '#666'
+      color: colors.lightGray
     },
 })
 

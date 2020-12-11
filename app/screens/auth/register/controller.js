@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import { Modal } from '../../../components/common';
 import { AppText } from '../../../components/form';
-import RegisterView from './view'
+import RegisterView from './view';
 
 const registerController = ({ navigation }) => {
   const [ userData, changeData ] = useState({
@@ -69,7 +69,6 @@ const registerController = ({ navigation }) => {
       />
       <RegisterView 
         isLoading={isLoading}
-        changeLoader={changeLoader}
         navigation={navigation} 
         userData={userData} 
         changeData={changeData} 

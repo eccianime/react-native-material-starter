@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Modal, Portal } from 'react-native-paper';
 import { AppText } from '../form';
-
+import colors from "../../config/colors";
 
 const ModalPopUp = ({ type = '', title, visible, onDismiss }) => (
     <Portal>
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     titleText: {
-        color: '#FFF',
+        color: colors.white
     }
 })
 

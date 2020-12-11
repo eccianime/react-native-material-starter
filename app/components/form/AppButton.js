@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { TouchableRipple } from 'react-native-paper';
+import colors from '../../config/colors';
 import AppText from './AppText';
 
 const AppButton = ({ style, onPress, label, containerStyle, labelStyle, disabled }) =>(
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
     },
     label: {
         paddingVertical: 10,
-        color: '#FFF',
+        color: colors.white,
         fontSize: 16,
         textAlign: "center",
     }

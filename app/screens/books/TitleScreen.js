@@ -2,17 +2,18 @@ import React from 'react';
 import { StyleSheet, ScrollView, View } from 'react-native';
 import { AppField, AppText } from '../../components/form';
 import { BookCard } from '../../components/book'
+import colors from '../../config/colors';
 
 const Title = ({ navigation }) => { 
     return (
         <ScrollView style={styles.container}>
             <AppField icon='search' placeholder='Search Title' containerStyle={styles.field} />
             <View style={styles.containerBooks}>
-                <BookCard navigation={navigation} image={ require('../../assets/images/portada01.jpg') }  />
-                <BookCard navigation={navigation} image={ require('../../assets/images/portada01.jpg') }  />
-                <BookCard navigation={navigation} image={ require('../../assets/images/portada01.jpg') }  />
-                <BookCard navigation={navigation} image={ require('../../assets/images/portada01.jpg') }  />
-                <BookCard navigation={navigation} image={ require('../../assets/images/portada01.jpg') }  />
+                <BookCard navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
+                <BookCard navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
+                <BookCard navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
+                <BookCard navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
+                <BookCard navigation={navigation} image={ require('../../assets/images/cover01.jpg') }  />
             </View>
         </ScrollView>
     )
@@ -20,7 +21,7 @@ const Title = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'white',
+        backgroundColor: colors.white,
         paddingTop: 20,
         paddingHorizontal: 10,
     },

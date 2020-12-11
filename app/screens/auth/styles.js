@@ -1,16 +1,16 @@
 import { StyleSheet } from 'react-native';
-import colors from '../../../config/colors';
+import colors from '../../config/colors';
 
 export const styles = StyleSheet.create({
   label: {
     paddingVertical: 10,
     color: colors.lightgray
   },
-  loginButton: {
-    backgroundColor: colors.secondary,
-  },
-  registerButton: {
+  primaryButton: {
     backgroundColor: colors.primary
+  },
+  secondaryButton: {
+    backgroundColor: colors.secondary,
   },
   title: {
     paddingVertical: 10,

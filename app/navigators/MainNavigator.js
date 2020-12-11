@@ -7,6 +7,7 @@ import { AppText } from '../components/form';
 
 import Home from './HomeNavigator';
 import Books from './BooksNavigator';
+import colors from '../config/colors';
 /*import Books from './BooksNavigator';
 import Search from './SearchNavigator';
 import Favorites from './FavoritesNavigator';
@@ -32,13 +33,11 @@ export default function MainNavigator() {
                 case 'Favorites':   name = focused ? 'heart'      : 'heart-outline' ;  break;
                 case 'Profile':     name = focused ? 'person'     : 'person-outline' ; break;
             }
-            return <Icon name={name} color='#FFF' size={25} />
+            return <Icon name={name} color={colors.white} size={25} />
             },
         })}
         tabBarOptions={{ 
-          style: {
-              backgroundColor: '#7F0000',
-          },
+          style: {backgroundColor: colors.primary},
           showLabel: false 
         }}
     >

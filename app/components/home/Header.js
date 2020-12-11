@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import { AppText } from '../../components/form';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { TouchableRipple } from 'react-native-paper';
+import colors from '../../config/colors';
 
 const Header = ({ navigation }) => { 
     return (
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
     container: {
         height: 20,
         elevation: 3,
-        backgroundColor: 'white',
+        backgroundColor: colors.white,
         paddingVertical: 20,
         alignItems: "center",
         justifyContent: "center"
