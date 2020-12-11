@@ -6,7 +6,7 @@ import { AppText } from '../form';
 import Icon from 'react-native-vector-icons/Ionicons';
 import colors from '../../config/colors';
 
-const BookCard = ({ image, title, gender, year, author, id, navigation, style }) => {
+const BookCard = ({ image, title, genre, year, author, id, navigation, style }) => {
     const { width } = Dimensions.get('window');
     const onPress = () =>{
         navigation.push('Book Detail', { id })
@@ -22,7 +22,7 @@ const BookCard = ({ image, title, gender, year, author, id, navigation, style })
                     </BaseBackground>
                     <View style={styles.containerDescriptor}>
                         <AppText size='bold' style={styles.title}>Author</AppText>
-                        <AppText style={styles.subTitle}>Gender (Year)</AppText>
+                        <AppText style={styles.subTitle}>Genre (Year)</AppText>
                     </View>
                 </Surface>
             </TouchableOpacity>

@@ -61,7 +61,7 @@ const BookDetail = ({ navigation }) => {
                                     <AppText size='bold'>Year: </AppText><AppText>Year:</AppText>
                                 </View>
                                 <View style={{ marginBottom: 5 }}>
-                                    <AppText size='bold'>Gender(s): </AppText><AppText>Gender(s):</AppText>
+                                    <AppText size='bold'>Genre(s): </AppText><AppText>Genre(s):</AppText>
                                 </View>
                                 <View style={{ marginBottom: 5 }}>
                                     <AppText size='bold'>Rating: </AppText><AppText>Rating:</AppText>

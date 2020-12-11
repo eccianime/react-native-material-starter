@@ -7,12 +7,12 @@ import { Header } from '../../components/common';
 
 const FavoritesScreen = ({ navigation }) => { 
     const dataTitle = [
-        { title: 'Cien Anhos de Soledad', author: 'Gabriel Garcia Marquez', year: '2000', gender: 'Horror', image: require('../../assets/images/cover02.jpg') },
-        { title: 'El Jugador', author: 'Fiodor D', year: '2000', gender: 'Sci-Fi', image: require('../../assets/images/cover03.jpg') },
-        { title: 'La Iliada', author: 'Homero', year: '2000', gender: 'Western', image: require('../../assets/images/cover01.jpg') },
-        { title: 'Cien Anhos de Soledad', author: 'Gabriel Garcia Marquez', year: '2000', gender: 'Horror', image: require('../../assets/images/cover02.jpg') },
-        { title: 'El Jugador', author: 'Fiodor D', year: '2000', gender: 'Sci-Fi', image: require('../../assets/images/cover03.jpg') },
-        { title: 'La Iliada', author: 'Homero', year: '2000', gender: 'Western', image: require('../../assets/images/cover01.jpg') },
+        { title: 'Cien Anhos de Soledad', author: 'Gabriel Garcia Marquez', year: '2000', genre: 'Horror', image: require('../../assets/images/cover02.jpg') },
+        { title: 'El Jugador', author: 'Fiodor D', year: '2000', genre: 'Sci-Fi', image: require('../../assets/images/cover03.jpg') },
+        { title: 'La Iliada', author: 'Homero', year: '2000', genre: 'Western', image: require('../../assets/images/cover01.jpg') },
+        { title: 'Cien Anhos de Soledad', author: 'Gabriel Garcia Marquez', year: '2000', genre: 'Horror', image: require('../../assets/images/cover02.jpg') },
+        { title: 'El Jugador', author: 'Fiodor D', year: '2000', genre: 'Sci-Fi', image: require('../../assets/images/cover03.jpg') },
+        { title: 'La Iliada', author: 'Homero', year: '2000', genre: 'Western', image: require('../../assets/images/cover01.jpg') },
     ]
     return (
         <>

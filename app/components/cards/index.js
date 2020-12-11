@@ -1,5 +1,5 @@
 import Author from "./AuthorCard";
 import Book from "./BookCard";
-import Gender from "./GenderCard";
+import Genre from "./GenreCard";
 
-export { Author, Book, Gender }
+export { Author, Book, Genre }

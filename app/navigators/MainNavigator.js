@@ -1,13 +1,12 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import { Home } from '../screens/home';
 import Books from './BooksNavigator';
 import { Search } from '../screens/search';
 import { Favorites } from '../screens/favorites';
-import { Profile } from '../screens/profile'
+import Profile from './ProfileNavigator'
 import colors from '../config/colors';
 
 const Main = createBottomTabNavigator();

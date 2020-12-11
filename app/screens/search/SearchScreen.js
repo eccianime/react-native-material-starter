@@ -2,22 +2,22 @@ import React from 'react';
 import { StyleSheet, ScrollView, View } from 'react-native';
 
 import { AppField, AppText } from '../../components/form';
-import { Author, Book, Gender } from '../../components/cards'
+import { Author, Book, Genre } from '../../components/cards'
 import colors from '../../config/colors';
 import { Header } from '../../components/common';
 
 const Search = ({ navigation }) => { 
     const dataTitle = [
-        { title: 'Cien Anhos de Soledad', author: 'Gabriel Garcia Marquez', year: '2000', gender: 'Horror', image: require('../../assets/images/cover02.jpg') },
-        { title: 'El Jugador', author: 'Fiodor D', year: '2000', gender: 'Sci-Fi', image: require('../../assets/images/cover03.jpg') },
-        { title: 'La Iliada', author: 'Homero', year: '2000', gender: 'Western', image: require('../../assets/images/cover01.jpg') }
+        { title: 'Cien Anhos de Soledad', author: 'Gabriel Garcia Marquez', year: '2000', genre: 'Horror', image: require('../../assets/images/cover02.jpg') },
+        { title: 'El Jugador', author: 'Fiodor D', year: '2000', genre: 'Sci-Fi', image: require('../../assets/images/cover03.jpg') },
+        { title: 'La Iliada', author: 'Homero', year: '2000', genre: 'Western', image: require('../../assets/images/cover01.jpg') }
     ]
     const dataAuthor = [ 
         {   name: 'Gabriel Garcia Marquez', image: require('../../assets/images/author02.jpg')},
         {   name: 'Homero', image: require('../../assets/images/author03.jpg')},
         {   name: 'Fiodor Dovtoievski', image: require('../../assets/images/author04.jpg')} 
     ]
-    const dataGender = [ 
+    const dataGenre = [ 
         {name: 'Horror', image: require('../../assets/images/genre-02.jpg')},
         {name: 'Tech', image: require('../../assets/images/genre-03.jpg')},
         {name: 'SciFi', image: require('../../assets/images/genre-04.jpg')},
@@ -47,8 +47,8 @@ const Search = ({ navigation }) => {
                 </View>
                 <AppText size='bold' style={styles.resultsTitle}>Results By Genre</AppText>
                 {
-                    dataGender.map( ({image, name}, index) => (
-                        <Gender key={`card-${index}`} navigation={navigation} image={image} name={name} />
+                    dataGenre.map( ({image, name}, index) => (
+                        <Genre key={`card-${index}`} navigation={navigation} image={image} name={name} />
                     ))
                 }
             </ScrollView>

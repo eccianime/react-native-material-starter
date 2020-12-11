@@ -3,7 +3,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 
 import { AppText } from '../components/form';
 import { StyleSheet } from 'react-native';
-import { Title, Author, Gender } from '../screens/books'
+import { Title, Author, Genre } from '../screens/books'
 import colors from '../config/colors';
 import { Header } from '../components/common';
 
@@ -30,7 +30,7 @@ const BooksNavigator = ({ navigation }) => (
             >
             <Books.Screen name="Title" component={Title} />
             <Books.Screen name="Author" component={Author} />
-            <Books.Screen name="Gender" component={Gender} />
+            <Books.Screen name="Genre" component={Genre} />
         </Books.Navigator>
     </>
 );

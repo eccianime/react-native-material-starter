@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native';
 import { TouchableRipple } from "react-native-paper";
-import BaseBackground from '../../components/common/BaseBackground';
-import { AppText } from '../../components/form';
+import BaseBackground from '../common/BaseBackground';
+import { AppText } from '../form';
 import colors from '../../config/colors';
 
-const GenderCard = ({ image, name, id, navigation, style }) => {
+const GenreCard = ({ image, name, id, navigation, style }) => {
     const onPress = () =>{
         console.log('Hola')
         //navigation.push('Author Detail', { id })
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     }
 })
 
-export default GenderCard;
+export default GenreCard;
 
 
 /*{/*<View style={[ styles.container, { width: width/2-20 }, style]}>
