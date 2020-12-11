@@ -29,6 +29,7 @@ const signInController = ({ navigation }) => {
         changeLoader(false)
         navigation.navigate('Main', { screen: 'Recents' })
         AsyncStorage.setItem( 'userData', JSON.stringify(userData) )
+        AsyncStorage.setItem( 'uid', response.user.uid )
       }).catch( error =>{
         changeLoader(false)
         changeModal({   type: 'error', visible: true, title: error.message.substring( error.message.indexOf(']')+2 ) })
@@ -43,7 +44,6 @@ const signInController = ({ navigation }) => {
   }
   useEffect( ()=>{
     AsyncStorage.getItem('userData').then( item =>{
-      console.log(item)
       if( item !== null ){
         let data = JSON.parse( item )
         changeData(data)

@@ -11,7 +11,7 @@ const Header = ({ navigation }) => {
             <AppText size='bold' style={styles.text}>Book Store App</AppText>
             <TouchableRipple style={styles.button} onPress={ ()=>navigation.navigate('Sign In') } borderless>
                 <View style={{width: 34, height: 34, paddingLeft: 2, paddingTop: 3 }}>
-                    <Icon name='power' style={styles.icons} />
+                    <Icon name='power' style={styles.icon} />
                 </View>
             </TouchableRipple>
         </View> 
@@ -28,17 +28,19 @@ const styles = StyleSheet.create({
     container: {
         height: 20,
         elevation: 3,
-        backgroundColor: colors.white,
+        backgroundColor: colors.secondary,
         paddingVertical: 20,
         alignItems: "center",
         justifyContent: "center"
     },
-    icons: {
+    icon: {
         textAlign: "center",
-        fontSize: 24
+        fontSize: 24,
+        color: colors.white
     },
     text: {
         fontSize: 20,
+        color: colors.white
     },
 })
 

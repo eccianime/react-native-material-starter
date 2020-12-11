@@ -7,40 +7,18 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import colors from '../../config/colors';
 
 const BookCard = ({ image, title, gender, year, id, navigation, style }) => {
-    const [ width, updateWidth ] = useState(0);
-    
-    const isPortrait = () => {
-        const dim = Dimensions.get("screen")
-        return dim.height >= dim.width
-    }
-
-    useEffect( ()=>{
-        checkWidth()
-        return Dimensions.addEventListener("change", () => {
-            checkWidth()
-        })
-    }, [] )
-    const checkWidth = () =>{
-        let { width:newWidth } = Dimensions.get('window');
-        if( width !== newWidth ){
-            updateWidth( newWidth )
-        }
-    }
+    const { width } = Dimensions.get('window');
     const onPress = () =>{
         navigation.push('Book Detail', { id })
     }
-    const user = undefined;
     return(
-        <View style={[ styles.container, { width: isPortrait() ? width/2-10 : width/3-10 }, style]}>
+        <View style={[ styles.container, { width: width/2-10 }, style]}>
             <TouchableOpacity onPress={onPress}>
                 <Surface style={{ elevation: 10 }}>
                     <BaseBackground source={ image } style={styles.image}>
-                    {
-                        user && 
-                        <TouchableOpacity style={styles.iconButton} onPress={onPress}>
-                            <Icon name='heart-outline' style={styles.icon} />
-                        </TouchableOpacity>
-                    }
+                    <TouchableOpacity style={styles.iconButton} onPress={()=>console.log('Add to Favorite')}>
+                        <Icon name='heart-outline' style={styles.icon} />
+                    </TouchableOpacity>
                     </BaseBackground>
                     <View style={styles.containerDescriptor}>
                         <AppText size='bold' style={styles.title}>Author</AppText>

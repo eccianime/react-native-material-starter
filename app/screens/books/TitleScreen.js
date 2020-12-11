@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         paddingBottom: 20
     },
     field: {
-        paddingHorizontal: 10
+        paddingHorizontal: 10,
     },
     title: {
         textAlign: "center",
