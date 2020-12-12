@@ -5,15 +5,19 @@ import { Provider as PaperProvider } from 'react-native-paper';
 import { name as appName } from './app.json';
 import { NavigationContainer } from '@react-navigation/native';
 import AuthNavigator from './app/navigators/AuthNavigator';
+import { Provider } from 'react-redux';
+import store from './app/stores';
 
 export default function Main() {
     return (
-      <NavigationContainer>
-        <StatusBar hidden={true} />
-        <PaperProvider>
-          <AuthNavigator />
-        </PaperProvider>
-      </NavigationContainer>
+      <Provider store={store}>
+        <NavigationContainer>
+          <StatusBar hidden={true} />
+          <PaperProvider>
+            <AuthNavigator />
+          </PaperProvider>
+        </NavigationContainer>
+      </Provider>
     );
 }
 

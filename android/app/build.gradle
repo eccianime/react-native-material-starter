@@ -1,5 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: 'com.google.gms.google-services'
+apply from: '../../node_modules/react-native-unimodules/gradle.groovy'
 
 import com.android.build.OutputFile
 
@@ -210,6 +211,7 @@ dependencies {
         implementation jscFlavor
     }
     implementation 'androidx.multidex:multidex:2.0.1'
+    addUnimodulesDependencies()
 }
 
 // Run this once to be able to run the application with BUCK

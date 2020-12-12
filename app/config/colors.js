@@ -8,4 +8,5 @@ export default {
     opaquegray: '#DDDDDD',
     green: '#007F00',
     blue: '#00007F',
+    rose: '#FFCCCC',
 }

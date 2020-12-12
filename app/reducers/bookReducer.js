@@ -1,0 +1,12 @@
+const bookState = {
+    data: []
+}
+
+const Book = ( state = bookState, action )=>{
+    switch (action.type) {
+        case '':    return { ...state }
+        default:    return state
+      }  
+}
+
+export default Book;

@@ -14,7 +14,7 @@ import {
 const Auth = createStackNavigator();
 const AuthNavigator = () => (
   <Auth.Navigator screenOptions={screenOptions} >
-    <Auth.Screen name="Profile" component={Profile} />
+    <Auth.Screen name="User" component={Profile} />
     <Auth.Screen name="Admin" component={Admin} />
 
     <Auth.Screen name="Admin Authors" component={Authors} />
