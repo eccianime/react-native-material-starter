@@ -2,9 +2,14 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import screenOptions from '../config/screenOptions';
-import { Profile, Admin } from '../screens/profile';
+import { Profile } from '../screens/profile';
 
-import { Authors, Books, Genres, Users } from "../screens/admin";
+import { 
+  Admin, Users, 
+  Authors, AddAuthor,
+  Books, 
+  Genres, 
+} from "../screens/admin";
 
 const Auth = createStackNavigator();
 const AuthNavigator = () => (
@@ -13,6 +18,7 @@ const AuthNavigator = () => (
     <Auth.Screen name="Admin" component={Admin} />
 
     <Auth.Screen name="Admin Authors" component={Authors} />
+    <Auth.Screen name="Add Author" component={AddAuthor} />
     <Auth.Screen name="Admin Books" component={Books} />
     <Auth.Screen name="Admin Genres" component={Genres} />
     <Auth.Screen name="Admin Users" component={Users} />
