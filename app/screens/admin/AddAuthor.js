@@ -4,7 +4,6 @@ import { Surface } from 'react-native-paper';
 import * as yup from "yup";
 import firestore from '@react-native-firebase/firestore';
 import Icon from 'react-native-vector-icons/Ionicons';
-import ImagePicker from 'react-native-image-picker'
 
 import { Header, Loader, Modal } from '../../components/common';
 import { AppButton, AppField, AppText } from '../../components/form';
@@ -50,16 +49,6 @@ const AddAuthor = ({ navigation }) => {
     }
     const openImageLibrary = () =>{
         console.log('hola')
-        ImagePicker.launchCamera()
-        ImagePicker.launchImageLibrary({
-          title: "Select Author Photo",
-          storageOptions: {
-              skipBackup: true,
-              path: true
-          }
-        }, response => {
-            console.log(response)
-        })
     }
     return (
         <>
